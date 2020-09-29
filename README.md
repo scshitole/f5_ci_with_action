@@ -41,8 +41,8 @@ The `terraform` directory has tf files for creating instances for Consul, F5, IA
 ### Steps 
 - Clone the repository & change working directory to terraform
 ```
-git clone https://github.com/dgarrison63/consul_testing
-cd consul_testing/terraform/
+git clone https://github.com/hashicorp/f5-terraform-consul-sd-webinar
+cd f5-terraform-consul-sd-webinar/terraform/
 ```
 
 - Modify `terraform.tfvars.example` and define a **prefix** to add to each of your resources that are created in AWS to help uniquely identify them
