@@ -1,6 +1,6 @@
-{ 
+ { 
   "bucket": {
-    "name": "scscont-consul-sd",
+    "name": "scsci-consul-sd",
     "key": "deploy-infrastructure",
     "region": "us-east-1"
   }

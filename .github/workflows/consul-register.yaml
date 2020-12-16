@@ -30,7 +30,6 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
         AWS_REGION: ${{ steps.s3_bucket.outputs.s3_bucket_region }}
 
       run: | 
@@ -44,10 +43,16 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
         AWS_REGION: ${{ steps.s3_bucket.outputs.s3_bucket_region }}
         SOURCE: s3://${{ steps.s3_bucket.outputs.s3_bucket_name }}/${{ steps.s3_bucket.outputs.s3_bucket_key }}
         DEST: ./s3-variables
+
+    # display S3 cntents
+    - name: Display S3 Contents
+      run: cat  ./s3-variables
+
+        
+
 
     # Install the Consul CLI for use in registering a new Consul service
     - name: Install Consul CLI & Consul Templating
