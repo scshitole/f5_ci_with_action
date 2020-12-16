@@ -35,6 +35,11 @@ jobs:
         AWS_REGION: ${{ steps.s3_bucket.outputs.s3_bucket_region }}
         SOURCE: s3://${{ steps.s3_bucket.outputs.s3_bucket_name }}/${{ steps.s3_bucket.outputs.s3_bucket_key }}
         DEST: ./s3-variables
+    
+    # Display the S3 Contents
+    - name: display S3 contents
+      run: cat ./s3-variables
+      
 
     # Prepare the environment to run the F5 CLI Python app
     - name: Set up Python 3.7
