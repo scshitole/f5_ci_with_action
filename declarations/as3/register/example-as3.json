@@ -13,7 +13,7 @@
         "virtualAddresses": [
           "10.0.0.201"
         ],
-        "pool": "web_pool",
+        "pool": "web_pools",
         "persistenceMethods": [],
         "profileMultiplex": {
           "bigip": "/Common/oneconnect"

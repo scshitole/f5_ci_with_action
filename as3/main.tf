@@ -6,7 +6,10 @@ provider "bigip" {
 # pin to 1.1.2
 terraform {
   required_providers {
-    bigip = "~> 1.1.2"
+    bigip = {
+      source = "F5Networks/bigip"
+      version = "1.5.0"
+    }
   }
 }
 
