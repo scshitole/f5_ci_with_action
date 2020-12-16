@@ -1,6 +1,6 @@
 {
     "service": {
-      "name": "test1-example",
+      "name": "test2-example",
       "port": 80,
       "checks": [
         {
