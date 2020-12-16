@@ -1,6 +1,6 @@
 {
     "service": {
-      "name": "tes333xample",
+      "name": "testingfinalxample",
       "port": 80,
       "checks": [
         {
