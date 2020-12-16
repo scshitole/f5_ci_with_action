@@ -25,12 +25,6 @@ jobs:
     - uses: actions/checkout@v2
     
 
-    # Display Secrets
-    - name: Display secrets
-      run: |
-           echo " Displaying access key, ${{ secrets.AWS_ACCESS_KEY_ID }}"
-           echo " Displaying secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-
     # Read the S3 bucket parameters that were created during the initial Terraform processing
     - name: Read S3 bucket parameters
       id: s3_bucket
@@ -55,12 +49,6 @@ jobs:
         AWS_REGION: ${{ steps.s3_bucket.outputs.s3_bucket_region }}
         SOURCE: s3://${{ steps.s3_bucket.outputs.s3_bucket_name }}/${{ steps.s3_bucket.outputs.s3_bucket_key }}
         DEST: ./s3-variables
-
-    # display S3 cntents
-    - name: Display S3 Contents
-      run: cat  ./s3-variables
-
-        
 
 
     # Install the Consul CLI for use in registering a new Consul service
