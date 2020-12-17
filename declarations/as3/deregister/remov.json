@@ -1,8 +1,8 @@
 {
   "class": "ADC",
   "schemaVersion": "3.24.0",
-  "id": "Consul_SD",
-  "Example": {
+  "id": "Consul_S2D",
+  "Consul_S2D": {
     "class": "Tenant"
   }
 }
