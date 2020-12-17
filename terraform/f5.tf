@@ -3,7 +3,7 @@ resource "random_string" "password" {
   special = false
 }
 
-data "aws_ami" "f5_ami" {
+/*data "aws_ami" "f5_ami" {
   most_recent = true
   owners      = ["679593333241"]
 
@@ -11,11 +11,12 @@ data "aws_ami" "f5_ami" {
     name   = "name"
     values = [var.f5_ami_search_name]
   }
-}
+}*/
 
 resource "aws_instance" "f5" {
 
-  ami = data.aws_ami.f5_ami.id
+  //ami = data.aws_ami.f5_ami.id
+  ami = "ami-0008213e09717b0b0"
   instance_type               = "m5.xlarge"
   private_ip                  = "10.0.0.200"
   associate_public_ip_address = true

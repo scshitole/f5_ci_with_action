@@ -18,6 +18,9 @@
             "10.0.0.200"
           ],
           "pool": "web_pool",
+          "policyWAF": {
+            "bigip": "/Common/test-policy"
+          },
           "persistenceMethods": [],
           "profileMultiplex": {
             "bigip": "/Common/oneconnect"
