@@ -13,8 +13,16 @@ terraform {
   }
 }
 
+
+/*// Using  provisioner to install as3 rpm on bigip pass arguments as BIG-IP IP address, credentials and name of the rpm 
+resource "null_resource" "install_as3" {
+  provisioner "local-exec" {
+    command = "./install_as3.sh ${var.address} ${var.username}:${var.password} ${var.as3_rpm}"
+  }
+}*/
+
 # deploy application using as3
 resource "bigip_as3" "nginx" {
   as3_json    = file("nginx.json")
-#  depends_on  = [null_resource.install_as3]
+  #depends_on  = [null_resource.install_as3]
 }

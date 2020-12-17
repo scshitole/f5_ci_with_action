@@ -1,4 +1,4 @@
-#cloud-config
+    #cloud-config
 tmos_declared:
   enabled: true
   icontrollx_trusted_sources: false
