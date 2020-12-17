@@ -1,6 +1,6 @@
 {
     "service": {
-      "name": "testingfinalxample",
+      "name": "app1",
       "port": 80,
       "checks": [
         {
