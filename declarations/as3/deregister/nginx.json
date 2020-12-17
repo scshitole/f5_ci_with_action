@@ -1,6 +1,6 @@
 {
   "class": "AS3",
-  "action": "deploy",
+  "action": "remove",
   "persist": true,
   "declaration": {
     "class": "ADC",
