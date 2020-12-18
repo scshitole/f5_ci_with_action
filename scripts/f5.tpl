@@ -10,4 +10,5 @@ tmos_declared:
     # this is NOT a secure method, used for demo purposes only
     - tmsh modify auth user admin { password ${password} }
     - tmsh modify auth user admin shell bash
+    - tmsh modify sys provision asm level nominal
     - tmsh save sys config
