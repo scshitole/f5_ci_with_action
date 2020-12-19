@@ -7,7 +7,7 @@ local_ipv4="$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)"
 sudo apt-get install unzip
 
 #Download Consul
-CONSUL_VERSION="1.8.0"
+CONSUL_VERSION="1.7.2"
 curl --silent --remote-name https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_amd64.zip
 
 #Install Consul
@@ -64,17 +64,8 @@ EOF
 cat << EOF > /etc/consul.d/nginx.json
 {
   "service": {
-    "name": "nginx",
-    "port": 80,
-    "checks": [
-      {
-        "id": "nginx",
-        "name": "nginx TCP Check",
-        "tcp": "localhost:80",
-        "interval": "10s",
-        "timeout": "1s"
-      }
-    ]
+    "name": "app",
+    "port": 80
   }
 }
 EOF
@@ -97,9 +88,13 @@ services:
   web:
     image: nginxdemos/hello
     ports:
-    - "80:80"
+    - "9000:9000"
     restart: always
     command: [nginx-debug, '-g', 'daemon off;']
     network_mode: "host"
+  app:
+    image: karthequian/gruyere:latest
+    ports:
+    - "80:8008"
 EOF
 sudo docker-compose up -d
