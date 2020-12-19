@@ -33,7 +33,7 @@
               "servicePort": 80,
               "addressDiscovery": "consul",
               "updateInterval": 10,
-              "uri": "http://10.0.0.100:8500/v1/health/service/nginx?passing",
+              "uri": "http://10.0.0.100:8500/v1/health/service/app?passing",
 	      "jmesPathQuery": "[*].{id:Node.Address,ip:{private:Node.Address,public:Node.Address},port:Service.Port}"
             }
           ]
