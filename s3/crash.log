@@ -1,0 +1,1807 @@
+2020/12/19 11:18:11 [INFO] Terraform version: 0.14.0  
+2020/12/19 11:18:11 [INFO] Go runtime version: go1.15.2
+2020/12/19 11:18:11 [INFO] CLI args: []string{"/usr/local/bin/terraform", "plan"}
+2020/12/19 11:18:11 [DEBUG] Attempting to open CLI config file: /Users/shitole/.terraformrc
+2020/12/19 11:18:11 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/12/19 11:18:11 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2020/12/19 11:18:11 [DEBUG] ignoring non-existing provider search directory /Users/shitole/.terraform.d/plugins
+2020/12/19 11:18:11 [DEBUG] ignoring non-existing provider search directory /Users/shitole/Library/Application Support/io.terraform/plugins
+2020/12/19 11:18:11 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2020/12/19 11:18:11 [INFO] CLI command args: []string{"plan"}
+2020/12/19 11:18:11 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2020/12/19 11:18:11 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2020/12/19 11:18:11 [DEBUG] New state was assigned lineage "5a0fa6d7-f90f-d1bb-c40f-583720a6b17e"
+2020/12/19 11:18:11 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2020/12/19 11:18:11 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2020/12/19 11:18:11 [TRACE] providercache.fillMetaCache: scanning directory .terraform/providers
+2020/12/19 11:18:11 [TRACE] getproviders.SearchLocalDirectory: .terraform/providers is a symlink to .terraform/providers
+2020/12/19 11:18:11 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/aws v3.21.0 for darwin_amd64 at .terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64
+2020/12/19 11:18:11 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/null v3.0.0 for darwin_amd64 at .terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64
+2020/12/19 11:18:11 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/template v2.2.0 for darwin_amd64 at .terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64
+2020/12/19 11:18:11 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64 as a candidate package for registry.terraform.io/hashicorp/aws 3.21.0
+2020/12/19 11:18:11 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64 as a candidate package for registry.terraform.io/hashicorp/null 3.0.0
+2020/12/19 11:18:11 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64 as a candidate package for registry.terraform.io/hashicorp/template 2.2.0
+2020/12/19 11:18:11 [TRACE] providercache.fillMetaCache: using cached result from previous scan of .terraform/providers
+2020/12/19 11:18:11 [TRACE] providercache.fillMetaCache: using cached result from previous scan of .terraform/providers
+2020/12/19 11:18:11 [DEBUG] checking for provisioner in "."
+2020/12/19 11:18:11 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/12/19 11:18:11 [INFO] Failed to read plugin lock file .terraform/plugins/darwin_amd64/lock.json: open .terraform/plugins/darwin_amd64/lock.json: no such file or directory
+2020/12/19 11:18:11 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2020/12/19 11:18:11 [INFO] backend/local: starting Plan operation
+2020/12/19 11:18:11 [TRACE] backend/local: requesting state manager for workspace "default"
+2020/12/19 11:18:11 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2020/12/19 11:18:11 [TRACE] backend/local: requesting state lock for workspace "default"
+2020/12/19 11:18:11 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2020/12/19 11:18:11 [TRACE] statemgr.Filesystem: existing snapshot has lineage "c062e070-48e9-793e-539f-cfc19adfc746" serial 207
+2020/12/19 11:18:11 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2020/12/19 11:18:11 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2020/12/19 11:18:11 [TRACE] backend/local: reading remote state for workspace "default"
+2020/12/19 11:18:11 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/12/19 11:18:11 [TRACE] statemgr.Filesystem: read snapshot with lineage "c062e070-48e9-793e-539f-cfc19adfc746" serial 207
+2020/12/19 11:18:11 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2020/12/19 11:18:11 [TRACE] backend/local: building context for current working directory
+2020/12/19 11:18:11 [TRACE] terraform.NewContext: starting
+2020/12/19 11:18:11 [TRACE] terraform.NewContext: loading provider schemas
+2020/12/19 11:18:11 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/aws"
+2020-12-19T11:18:11.814-0800 [INFO]  plugin: configuring client automatic mTLS
+2020-12-19T11:18:11.842-0800 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5]
+2020-12-19T11:18:11.854-0800 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5 pid=35698
+2020-12-19T11:18:11.854-0800 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5
+2020-12-19T11:18:11.885-0800 [INFO]  plugin.terraform-provider-aws_v3.21.0_x5: configuring server automatic mTLS: timestamp=2020-12-19T11:18:11.885-0800
+2020-12-19T11:18:11.909-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: plugin address: address=/var/folders/yh/4084gs6x7t78bhqz9qw8cbdjt0h10j/T/plugin979952081 network=unix timestamp=2020-12-19T11:18:11.909-0800
+2020-12-19T11:18:11.909-0800 [DEBUG] plugin: using plugin: version=5
+2020/12/19 11:18:11 [TRACE] GRPCProvider: GetSchema
+2020-12-19T11:18:11.961-0800 [TRACE] plugin.stdio: waiting for stdio data
+2020/12/19 11:18:12 [TRACE] GRPCProvider: Close
+2020-12-19T11:18:12.032-0800 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-12-19T11:18:12.034-0800 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5 pid=35698
+2020-12-19T11:18:12.034-0800 [DEBUG] plugin: plugin exited
+2020/12/19 11:18:12 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/null"
+2020-12-19T11:18:12.034-0800 [INFO]  plugin: configuring client automatic mTLS
+2020-12-19T11:18:12.056-0800 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5]
+2020-12-19T11:18:12.059-0800 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5 pid=35699
+2020-12-19T11:18:12.059-0800 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5
+2020-12-19T11:18:12.068-0800 [INFO]  plugin.terraform-provider-null_v3.0.0_x5: configuring server automatic mTLS: timestamp=2020-12-19T11:18:12.068-0800
+2020-12-19T11:18:12.090-0800 [DEBUG] plugin.terraform-provider-null_v3.0.0_x5: plugin address: address=/var/folders/yh/4084gs6x7t78bhqz9qw8cbdjt0h10j/T/plugin700693942 network=unix timestamp=2020-12-19T11:18:12.090-0800
+2020-12-19T11:18:12.090-0800 [DEBUG] plugin: using plugin: version=5
+2020/12/19 11:18:12 [TRACE] GRPCProvider: GetSchema
+2020-12-19T11:18:12.134-0800 [TRACE] plugin.stdio: waiting for stdio data
+2020/12/19 11:18:12 [TRACE] GRPCProvider: Close
+2020-12-19T11:18:12.135-0800 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-12-19T11:18:12.136-0800 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5 pid=35699
+2020-12-19T11:18:12.136-0800 [DEBUG] plugin: plugin exited
+2020/12/19 11:18:12 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/template"
+2020-12-19T11:18:12.137-0800 [INFO]  plugin: configuring client automatic mTLS
+2020-12-19T11:18:12.156-0800 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4 args=[.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4]
+2020-12-19T11:18:12.160-0800 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4 pid=35700
+2020-12-19T11:18:12.160-0800 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4
+2020-12-19T11:18:12.167-0800 [INFO]  plugin.terraform-provider-template_v2.2.0_x4: configuring server automatic mTLS: timestamp=2020-12-19T11:18:12.167-0800
+2020-12-19T11:18:12.189-0800 [DEBUG] plugin.terraform-provider-template_v2.2.0_x4: plugin address: address=/var/folders/yh/4084gs6x7t78bhqz9qw8cbdjt0h10j/T/plugin197922971 network=unix timestamp=2020-12-19T11:18:12.189-0800
+2020-12-19T11:18:12.189-0800 [DEBUG] plugin: using plugin: version=5
+2020/12/19 11:18:12 [TRACE] GRPCProvider: GetSchema
+2020-12-19T11:18:12.236-0800 [TRACE] plugin.stdio: waiting for stdio data
+2020-12-19T11:18:12.237-0800 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2020/12/19 11:18:12 [TRACE] No provider meta schema returned
+2020/12/19 11:18:12 [TRACE] GRPCProvider: Close
+2020-12-19T11:18:12.238-0800 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4 pid=35700
+2020-12-19T11:18:12.238-0800 [DEBUG] plugin: plugin exited
+2020/12/19 11:18:12 [TRACE] LoadSchemas: retrieving schema for provisioner "local-exec"
+2020-12-19T11:18:12.238-0800 [DEBUG] plugin: starting plugin: path=/usr/local/bin/terraform args=[/usr/local/bin/terraform, internal-plugin, provisioner, local-exec]
+2020-12-19T11:18:12.241-0800 [DEBUG] plugin: plugin started: path=/usr/local/bin/terraform pid=35701
+2020-12-19T11:18:12.242-0800 [DEBUG] plugin: waiting for RPC address: path=/usr/local/bin/terraform
+2020-12-19T11:18:12.301-0800 [DEBUG] plugin: using plugin: version=5
+2020-12-19T11:18:12.302-0800 [TRACE] plugin.stdio: waiting for stdio data
+2020-12-19T11:18:12.308-0800 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-12-19T11:18:12.312-0800 [DEBUG] plugin: plugin process exited: path=/usr/local/bin/terraform pid=35701
+2020-12-19T11:18:12.312-0800 [DEBUG] plugin: plugin exited
+2020/12/19 11:18:12 [TRACE] terraform.NewContext: complete
+2020/12/19 11:18:12 [TRACE] backend/local: finished building terraform.Context
+2020/12/19 11:18:12 [TRACE] backend/local: requesting interactive input, if necessary
+2020/12/19 11:18:12 [TRACE] Context.Input: Prompting for provider arguments
+2020/12/19 11:18:12 [TRACE] Context.Input: Provider provider.aws declared at bucket.tf:1,1-15
+2020/12/19 11:18:12 [TRACE] Context.Input: Provider provider.null implied by resource block at bucket.tf:50,1-52
+2020/12/19 11:18:12 [TRACE] Context.Input: Provider provider.template implied by data block at bucket.tf:41,1-33
+2020/12/19 11:18:12 [TRACE] Context.Input: Input for provider.aws: map[string]cty.Value{}
+2020/12/19 11:18:12 [TRACE] Context.Input: Input for provider.null: map[string]cty.Value{}
+2020/12/19 11:18:12 [TRACE] Context.Input: Input for provider.template: map[string]cty.Value{}
+2020/12/19 11:18:12 [TRACE] backend/local: running validation operation
+2020/12/19 11:18:12 [INFO] terraform: building graph: GraphTypeValidate
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/12/19 11:18:12 [TRACE] ConfigTransformer: Starting for path: 
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+  data.template_file.as3_s3 - *terraform.NodeValidatableResource
+  data.template_file.s3 - *terraform.NodeValidatableResource
+  data.template_file.s3_values - *terraform.NodeValidatableResource
+  null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+  null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+  null_resource.export_rendered_template - *terraform.NodeValidatableResource
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+  data.template_file.as3_s3 - *terraform.NodeValidatableResource
+  data.template_file.s3 - *terraform.NodeValidatableResource
+  data.template_file.s3_values - *terraform.NodeValidatableResource
+  null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+  null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+  null_resource.export_rendered_template - *terraform.NodeValidatableResource
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/12/19 11:18:12 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching to "data.template_file.s3" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"bucket.tf", Start:hcl.Pos{Line:11, Column:1, Byte:161}, End:hcl.Pos{Line:11, Column:26, Byte:186}}
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.template_file.s3
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching to "null_resource.export_rendered_as3_s3_template" (*terraform.NodeValidatableResource) config from bucket.tf:35,1-59
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to null_resource.export_rendered_as3_s3_template
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching to "null_resource.export_rendered_template" (*terraform.NodeValidatableResource) config from bucket.tf:50,1-52
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to null_resource.export_rendered_template
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching to "data.template_file.as3_s3" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"bucket.tf", Start:hcl.Pos{Line:26, Column:1, Byte:551}, End:hcl.Pos{Line:26, Column:30, Byte:580}}
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.template_file.as3_s3
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching to "data.template_file.s3_values" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"bucket.tf", Start:hcl.Pos{Line:41, Column:1, Byte:944}, End:hcl.Pos{Line:41, Column:33, Byte:976}}
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.template_file.s3_values
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching to "aws_s3_bucket.mybucket" (*terraform.NodeValidatableResource) config from bucket.tf:5,1-36
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_s3_bucket.mybucket
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching to "null_resource.export_rendered_s3_template" (*terraform.NodeValidatableResource) config from bucket.tf:20,1-55
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to null_resource.export_rendered_s3_template
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/12/19 11:18:12 [TRACE] MissingProviderTransformer: added implicit provisioner local-exec, first implied by null_resource.export_rendered_s3_template
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer with new graph:
+  aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+  data.template_file.as3_s3 - *terraform.NodeValidatableResource
+  data.template_file.s3 - *terraform.NodeValidatableResource
+  data.template_file.s3_values - *terraform.NodeValidatableResource
+  null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+  null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+  null_resource.export_rendered_template - *terraform.NodeValidatableResource
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/12/19 11:18:12 [TRACE] ProvisionerTransformer: null_resource.export_rendered_s3_template is provisioned by local-exec ("provisioner.local-exec")
+2020/12/19 11:18:12 [TRACE] ProvisionerTransformer: null_resource.export_rendered_as3_s3_template is provisioned by local-exec ("provisioner.local-exec")
+2020/12/19 11:18:12 [TRACE] ProvisionerTransformer: null_resource.export_rendered_template is provisioned by local-exec ("provisioner.local-exec")
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ProvisionerTransformer with new graph:
+  aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+  data.template_file.as3_s3 - *terraform.NodeValidatableResource
+  data.template_file.s3 - *terraform.NodeValidatableResource
+  data.template_file.s3_values - *terraform.NodeValidatableResource
+  null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/12/19 11:18:12 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from bucket.tf:1,1-15
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+  data.template_file.as3_s3 - *terraform.NodeValidatableResource
+  data.template_file.s3 - *terraform.NodeValidatableResource
+  data.template_file.s3_values - *terraform.NodeValidatableResource
+  null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/12/19 11:18:12 [DEBUG] adding implicit provider configuration provider["registry.terraform.io/hashicorp/template"], implied first by data.template_file.s3
+2020/12/19 11:18:12 [DEBUG] adding implicit provider configuration provider["registry.terraform.io/hashicorp/null"], implied first by null_resource.export_rendered_as3_s3_template
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+  aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+  data.template_file.as3_s3 - *terraform.NodeValidatableResource
+  data.template_file.s3 - *terraform.NodeValidatableResource
+  data.template_file.s3_values - *terraform.NodeValidatableResource
+  null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/12/19 11:18:12 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/null"] serving null_resource.export_rendered_as3_s3_template
+2020/12/19 11:18:12 [DEBUG] ProviderTransformer: "null_resource.export_rendered_as3_s3_template" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/null"]
+2020/12/19 11:18:12 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/null"] serving null_resource.export_rendered_template
+2020/12/19 11:18:12 [DEBUG] ProviderTransformer: "null_resource.export_rendered_template" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/null"]
+2020/12/19 11:18:12 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/template"] serving data.template_file.s3
+2020/12/19 11:18:12 [DEBUG] ProviderTransformer: "data.template_file.s3" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/template"]
+2020/12/19 11:18:12 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/template"] serving data.template_file.as3_s3
+2020/12/19 11:18:12 [DEBUG] ProviderTransformer: "data.template_file.as3_s3" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/template"]
+2020/12/19 11:18:12 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/template"] serving data.template_file.s3_values
+2020/12/19 11:18:12 [DEBUG] ProviderTransformer: "data.template_file.s3_values" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/template"]
+2020/12/19 11:18:12 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_s3_bucket.mybucket
+2020/12/19 11:18:12 [DEBUG] ProviderTransformer: "aws_s3_bucket.mybucket" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/12/19 11:18:12 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/null"] serving null_resource.export_rendered_s3_template
+2020/12/19 11:18:12 [DEBUG] ProviderTransformer: "null_resource.export_rendered_s3_template" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/null"]
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  data.template_file.s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  data.template_file.s3_values - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  data.template_file.s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  data.template_file.s3_values - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching resource schema to null_resource.export_rendered_s3_template
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching provisioner "local-exec" config schema to null_resource.export_rendered_s3_template
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching resource schema to null_resource.export_rendered_as3_s3_template
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching provisioner "local-exec" config schema to null_resource.export_rendered_as3_s3_template
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching resource schema to null_resource.export_rendered_template
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching provisioner "local-exec" config schema to null_resource.export_rendered_template
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching resource schema to data.template_file.as3_s3
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching resource schema to data.template_file.s3_values
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_s3_bucket.mybucket
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/null"]
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/template"]
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching resource schema to data.template_file.s3
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "data.template_file.s3" references: [var.prefix var.region]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/template\"]" references: []
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "data.template_file.s3_values" references: [var.prefix var.region]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "var.prefix" references: []
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "var.region" references: []
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "aws_s3_bucket.mybucket" references: [var.prefix]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "null_resource.export_rendered_s3_template" references: [data.template_file.s3]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "null_resource.export_rendered_as3_s3_template" references: [data.template_file.as3_s3]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "null_resource.export_rendered_template" references: [data.template_file.s3_values]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "data.template_file.as3_s3" references: [var.prefix var.region]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "provisioner.local-exec" references: []
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: [var.region]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/null\"]" references: []
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3_values - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    data.template_file.s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    data.template_file.s3_values - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/12/19 11:18:12 [TRACE] attachDataDependenciesTransformer: data.template_file.s3 depends on []
+2020/12/19 11:18:12 [TRACE] attachDataDependenciesTransformer: data.template_file.as3_s3 depends on []
+2020/12/19 11:18:12 [TRACE] attachDataDependenciesTransformer: data.template_file.s3_values depends on []
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3_values - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+    data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    data.template_file.s3 - *terraform.NodeValidatableResource
+    data.template_file.s3_values - *terraform.NodeValidatableResource
+    null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    data.template_file.s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    data.template_file.s3_values - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3_values - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+    data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    data.template_file.s3 - *terraform.NodeValidatableResource
+    data.template_file.s3_values - *terraform.NodeValidatableResource
+    null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    data.template_file.s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    data.template_file.s3_values - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] (close) - *terraform.graphNodeCloseProvider
+    null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] (close) - *terraform.graphNodeCloseProvider
+    data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    data.template_file.s3 - *terraform.NodeValidatableResource
+    data.template_file.s3_values - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3_values - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+    data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    data.template_file.s3 - *terraform.NodeValidatableResource
+    data.template_file.s3_values - *terraform.NodeValidatableResource
+    null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    data.template_file.s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    data.template_file.s3_values - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] (close) - *terraform.graphNodeCloseProvider
+    null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] (close) - *terraform.graphNodeCloseProvider
+    data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    data.template_file.s3 - *terraform.NodeValidatableResource
+    data.template_file.s3_values - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/hashicorp/null"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/hashicorp/template"] (close) - *terraform.graphNodeCloseProvider
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3_values - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+    null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    null_resource.export_rendered_template - *terraform.NodeValidatableResource
+  null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    data.template_file.s3 - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template - *terraform.NodeValidatableResource
+    data.template_file.s3_values - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_s3_bucket.mybucket - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] (close) - *terraform.graphNodeCloseProvider
+    null_resource.export_rendered_as3_s3_template - *terraform.NodeValidatableResource
+    null_resource.export_rendered_s3_template - *terraform.NodeValidatableResource
+    null_resource.export_rendered_template - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] (close) - *terraform.graphNodeCloseProvider
+    data.template_file.as3_s3 - *terraform.NodeValidatableResource
+    data.template_file.s3 - *terraform.NodeValidatableResource
+    data.template_file.s3_values - *terraform.NodeValidatableResource
+  provisioner.local-exec - *terraform.NodeProvisioner
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/hashicorp/null"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/hashicorp/template"] (close) - *terraform.graphNodeCloseProvider
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [DEBUG] Starting graph walk: walkValidate
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "provisioner.local-exec"
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/template\"]"
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/null\"]"
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "var.region"
+2020/12/19 11:18:12 [TRACE] vertex "provisioner.local-exec": starting visit (*terraform.NodeProvisioner)
+2020/12/19 11:18:12 [TRACE] vertex "var.region": starting visit (*terraform.NodeRootVariable)
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "var.prefix"
+2020/12/19 11:18:12 [TRACE] vertex "var.prefix": starting visit (*terraform.NodeRootVariable)
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/null\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/template\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/12/19 11:18:12 [TRACE] vertex "var.region": visit complete
+2020/12/19 11:18:12 [TRACE] vertex "var.prefix": visit complete
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2020-12-19T11:18:12.320-0800 [DEBUG] plugin: starting plugin: path=/usr/local/bin/terraform args=[/usr/local/bin/terraform, internal-plugin, provisioner, local-exec]
+2020-12-19T11:18:12.320-0800 [INFO]  plugin: configuring client automatic mTLS
+2020-12-19T11:18:12.323-0800 [DEBUG] plugin: plugin started: path=/usr/local/bin/terraform pid=35703
+2020-12-19T11:18:12.324-0800 [DEBUG] plugin: waiting for RPC address: path=/usr/local/bin/terraform
+2020-12-19T11:18:12.347-0800 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5]
+2020-12-19T11:18:12.350-0800 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5 pid=35704
+2020-12-19T11:18:12.351-0800 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5
+2020-12-19T11:18:12.358-0800 [INFO]  plugin.terraform-provider-null_v3.0.0_x5: configuring server automatic mTLS: timestamp=2020-12-19T11:18:12.358-0800
+2020-12-19T11:18:12.374-0800 [DEBUG] plugin: using plugin: version=5
+2020/12/19 11:18:12 [TRACE] vertex "provisioner.local-exec": visit complete
+2020-12-19T11:18:12.375-0800 [TRACE] plugin.stdio: waiting for stdio data
+2020-12-19T11:18:12.381-0800 [DEBUG] plugin.terraform-provider-null_v3.0.0_x5: plugin address: address=/var/folders/yh/4084gs6x7t78bhqz9qw8cbdjt0h10j/T/plugin523951679 network=unix timestamp=2020-12-19T11:18:12.381-0800
+2020-12-19T11:18:12.381-0800 [DEBUG] plugin: using plugin: version=5
+2020/12/19 11:18:12 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/null\"]" provider for provider["registry.terraform.io/hashicorp/null"]
+2020-12-19T11:18:12.426-0800 [TRACE] plugin.stdio: waiting for stdio data
+2020-12-19T11:18:12.427-0800 [INFO]  plugin: configuring client automatic mTLS
+2020-12-19T11:18:12.448-0800 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4 args=[.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4]
+2020-12-19T11:18:12.452-0800 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4 pid=35706
+2020-12-19T11:18:12.452-0800 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4
+2020-12-19T11:18:12.459-0800 [INFO]  plugin.terraform-provider-template_v2.2.0_x4: configuring server automatic mTLS: timestamp=2020-12-19T11:18:12.459-0800
+2020-12-19T11:18:12.481-0800 [DEBUG] plugin.terraform-provider-template_v2.2.0_x4: plugin address: address=/var/folders/yh/4084gs6x7t78bhqz9qw8cbdjt0h10j/T/plugin522269457 network=unix timestamp=2020-12-19T11:18:12.481-0800
+2020-12-19T11:18:12.481-0800 [DEBUG] plugin: using plugin: version=5
+2020/12/19 11:18:12 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/template\"]" provider for provider["registry.terraform.io/hashicorp/template"]
+2020-12-19T11:18:12.526-0800 [TRACE] plugin.stdio: waiting for stdio data
+2020/12/19 11:18:12 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/template"]: no configuration at all
+2020/12/19 11:18:12 [TRACE] GRPCProvider: GetSchema
+2020-12-19T11:18:12.526-0800 [INFO]  plugin: configuring client automatic mTLS
+2020-12-19T11:18:12.526-0800 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2020/12/19 11:18:12 [TRACE] No provider meta schema returned
+2020/12/19 11:18:12 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/template\"]": visit complete
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "data.template_file.s3_values"
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3_values": starting visit (*terraform.NodeValidatableResource)
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "data.template_file.s3"
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "data.template_file.as3_s3"
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3": starting visit (*terraform.NodeValidatableResource)
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.as3_s3": starting visit (*terraform.NodeValidatableResource)
+2020-12-19T11:18:12.547-0800 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5]
+2020-12-19T11:18:12.559-0800 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5 pid=35707
+2020-12-19T11:18:12.559-0800 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5
+2020-12-19T11:18:12.589-0800 [INFO]  plugin.terraform-provider-aws_v3.21.0_x5: configuring server automatic mTLS: timestamp=2020-12-19T11:18:12.589-0800
+2020-12-19T11:18:12.613-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: plugin address: address=/var/folders/yh/4084gs6x7t78bhqz9qw8cbdjt0h10j/T/plugin586725174 network=unix timestamp=2020-12-19T11:18:12.613-0800
+2020-12-19T11:18:12.613-0800 [DEBUG] plugin: using plugin: version=5
+2020/12/19 11:18:12 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2020/12/19 11:18:12 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2020-12-19T11:18:12.657-0800 [TRACE] plugin.stdio: waiting for stdio data
+2020/12/19 11:18:12 [TRACE] GRPCProvider: GetSchema
+2020/12/19 11:18:12 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/null"]: no configuration at all
+2020/12/19 11:18:12 [TRACE] GRPCProvider: GetSchema
+2020/12/19 11:18:12 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/null\"]": visit complete
+2020/12/19 11:18:12 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2020/12/19 11:18:12 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2020/12/19 11:18:12 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.as3_s3": visit complete
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "null_resource.export_rendered_as3_s3_template"
+2020/12/19 11:18:12 [TRACE] vertex "null_resource.export_rendered_as3_s3_template": starting visit (*terraform.NodeValidatableResource)
+2020/12/19 11:18:12 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3_values": visit complete
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "null_resource.export_rendered_template"
+2020/12/19 11:18:12 [TRACE] vertex "null_resource.export_rendered_template": starting visit (*terraform.NodeValidatableResource)
+2020/12/19 11:18:12 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3": visit complete
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/template\"] (close)"
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/template\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/12/19 11:18:12 [TRACE] GRPCProvider: Close
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "null_resource.export_rendered_s3_template"
+2020/12/19 11:18:12 [TRACE] vertex "null_resource.export_rendered_s3_template": starting visit (*terraform.NodeValidatableResource)
+2020-12-19T11:18:12.662-0800 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4 pid=35706
+2020-12-19T11:18:12.662-0800 [DEBUG] plugin: plugin exited
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/template\"] (close)": visit complete
+2020/12/19 11:18:12 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/12/19 11:18:12 [TRACE] vertex "null_resource.export_rendered_as3_s3_template": visit complete
+2020/12/19 11:18:12 [TRACE] vertex "null_resource.export_rendered_s3_template": visit complete
+2020/12/19 11:18:12 [TRACE] vertex "null_resource.export_rendered_template": visit complete
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/null\"] (close)"
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/null\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/12/19 11:18:12 [TRACE] GRPCProvider: Close
+2020-12-19T11:18:12.665-0800 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-12-19T11:18:12.666-0800 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5 pid=35704
+2020-12-19T11:18:12.666-0800 [DEBUG] plugin: plugin exited
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/null\"] (close)": visit complete
+2020/12/19 11:18:12 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "aws_s3_bucket.mybucket"
+2020/12/19 11:18:12 [TRACE] vertex "aws_s3_bucket.mybucket": starting visit (*terraform.NodeValidatableResource)
+2020/12/19 11:18:12 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/12/19 11:18:12 [TRACE] vertex "aws_s3_bucket.mybucket": visit complete
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/12/19 11:18:12 [TRACE] GRPCProvider: Close
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/12/19 11:18:12 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/12/19 11:18:12 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020-12-19T11:18:12.781-0800 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-12-19T11:18:12.784-0800 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5 pid=35707
+2020-12-19T11:18:12.784-0800 [DEBUG] plugin: plugin exited
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "root"
+2020/12/19 11:18:12 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2020/12/19 11:18:12 [TRACE] vertex "root": visit complete
+2020/12/19 11:18:12 [INFO] backend/local: plan calling Plan
+2020/12/19 11:18:12 [INFO] terraform: building graph: GraphTypePlan
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/12/19 11:18:12 [TRACE] ConfigTransformer: Starting for path: 
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+  null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+  null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+  null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+  null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+  null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+  null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/12/19 11:18:12 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching to "data.template_file.s3 (expand)" (*terraform.nodeExpandPlannableResource) config from hcl.Range{Filename:"bucket.tf", Start:hcl.Pos{Line:11, Column:1, Byte:161}, End:hcl.Pos{Line:11, Column:26, Byte:186}}
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.template_file.s3 (expand)
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching to "aws_s3_bucket.mybucket (expand)" (*terraform.nodeExpandPlannableResource) config from bucket.tf:5,1-36
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_s3_bucket.mybucket (expand)
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching to "null_resource.export_rendered_s3_template (expand)" (*terraform.nodeExpandPlannableResource) config from bucket.tf:20,1-55
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to null_resource.export_rendered_s3_template (expand)
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching to "null_resource.export_rendered_as3_s3_template (expand)" (*terraform.nodeExpandPlannableResource) config from bucket.tf:35,1-59
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to null_resource.export_rendered_as3_s3_template (expand)
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching to "data.template_file.s3_values (expand)" (*terraform.nodeExpandPlannableResource) config from hcl.Range{Filename:"bucket.tf", Start:hcl.Pos{Line:41, Column:1, Byte:944}, End:hcl.Pos{Line:41, Column:33, Byte:976}}
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.template_file.s3_values (expand)
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching to "null_resource.export_rendered_template (expand)" (*terraform.nodeExpandPlannableResource) config from bucket.tf:50,1-52
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to null_resource.export_rendered_template (expand)
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching to "data.template_file.as3_s3 (expand)" (*terraform.nodeExpandPlannableResource) config from hcl.Range{Filename:"bucket.tf", Start:hcl.Pos{Line:26, Column:1, Byte:551}, End:hcl.Pos{Line:26, Column:30, Byte:580}}
+2020/12/19 11:18:12 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.template_file.as3_s3 (expand)
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/12/19 11:18:12 [TRACE] MissingProviderTransformer: added implicit provisioner local-exec, first implied by null_resource.export_rendered_template (expand)
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer with new graph:
+  aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+  null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+  null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+  null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/12/19 11:18:12 [TRACE] ProvisionerTransformer: null_resource.export_rendered_s3_template (expand) is provisioned by local-exec ("provisioner.local-exec")
+2020/12/19 11:18:12 [TRACE] ProvisionerTransformer: null_resource.export_rendered_as3_s3_template (expand) is provisioned by local-exec ("provisioner.local-exec")
+2020/12/19 11:18:12 [TRACE] ProvisionerTransformer: null_resource.export_rendered_template (expand) is provisioned by local-exec ("provisioner.local-exec")
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ProvisionerTransformer with new graph:
+  aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+  null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/12/19 11:18:12 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from bucket.tf:1,1-15
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+  null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/12/19 11:18:12 [DEBUG] adding implicit provider configuration provider["registry.terraform.io/hashicorp/null"], implied first by null_resource.export_rendered_template (expand)
+2020/12/19 11:18:12 [DEBUG] adding implicit provider configuration provider["registry.terraform.io/hashicorp/template"], implied first by data.template_file.as3_s3 (expand)
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+  aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+  data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+  null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/12/19 11:18:12 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/null"] serving null_resource.export_rendered_as3_s3_template (expand)
+2020/12/19 11:18:12 [DEBUG] ProviderTransformer: "null_resource.export_rendered_as3_s3_template (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/null"]
+2020/12/19 11:18:12 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/template"] serving data.template_file.s3_values (expand)
+2020/12/19 11:18:12 [DEBUG] ProviderTransformer: "data.template_file.s3_values (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/template"]
+2020/12/19 11:18:12 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/template"] serving data.template_file.s3 (expand)
+2020/12/19 11:18:12 [DEBUG] ProviderTransformer: "data.template_file.s3 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/template"]
+2020/12/19 11:18:12 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/null"] serving null_resource.export_rendered_template (expand)
+2020/12/19 11:18:12 [DEBUG] ProviderTransformer: "null_resource.export_rendered_template (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/null"]
+2020/12/19 11:18:12 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/template"] serving data.template_file.as3_s3 (expand)
+2020/12/19 11:18:12 [DEBUG] ProviderTransformer: "data.template_file.as3_s3 (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/template"]
+2020/12/19 11:18:12 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_s3_bucket.mybucket (expand)
+2020/12/19 11:18:12 [DEBUG] ProviderTransformer: "aws_s3_bucket.mybucket (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/12/19 11:18:12 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/null"] serving null_resource.export_rendered_s3_template (expand)
+2020/12/19 11:18:12 [DEBUG] ProviderTransformer: "null_resource.export_rendered_s3_template (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/null"]
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/12/19 11:18:12 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching resource schema to null_resource.export_rendered_s3_template (expand)
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching provisioner "local-exec" config schema to null_resource.export_rendered_s3_template (expand)
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching resource schema to null_resource.export_rendered_as3_s3_template (expand)
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching provisioner "local-exec" config schema to null_resource.export_rendered_as3_s3_template (expand)
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching resource schema to data.template_file.s3_values (expand)
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching resource schema to data.template_file.s3 (expand)
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_s3_bucket.mybucket (expand)
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/template"]
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching resource schema to data.template_file.as3_s3 (expand)
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/null"]
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching resource schema to null_resource.export_rendered_template (expand)
+2020/12/19 11:18:12 [TRACE] AttachSchemaTransformer: attaching provisioner "local-exec" config schema to null_resource.export_rendered_template (expand)
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/null\"]" references: []
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "null_resource.export_rendered_template (expand)" references: [data.template_file.s3_values (expand)]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "data.template_file.as3_s3 (expand)" references: [var.prefix var.region]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "var.prefix" references: []
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "data.template_file.s3_values (expand)" references: [var.prefix var.region]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "data.template_file.s3 (expand)" references: [var.prefix var.region]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "var.region" references: []
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "provisioner.local-exec" references: []
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: [var.region]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "aws_s3_bucket.mybucket (expand)" references: [var.prefix]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "null_resource.export_rendered_s3_template (expand)" references: [data.template_file.s3 (expand)]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "null_resource.export_rendered_as3_s3_template (expand)" references: [data.template_file.as3_s3 (expand)]
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/template\"]" references: []
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/12/19 11:18:12 [TRACE] AttachDependenciesTransformer: aws_s3_bucket.mybucket depends on []
+2020/12/19 11:18:12 [TRACE] AttachDependenciesTransformer: null_resource.export_rendered_s3_template depends on [data.template_file.s3]
+2020/12/19 11:18:12 [TRACE] AttachDependenciesTransformer: null_resource.export_rendered_as3_s3_template depends on [data.template_file.as3_s3]
+2020/12/19 11:18:12 [TRACE] AttachDependenciesTransformer: data.template_file.s3_values depends on []
+2020/12/19 11:18:12 [TRACE] AttachDependenciesTransformer: data.template_file.s3 depends on []
+2020/12/19 11:18:12 [TRACE] AttachDependenciesTransformer: null_resource.export_rendered_template depends on [data.template_file.s3_values]
+2020/12/19 11:18:12 [TRACE] AttachDependenciesTransformer: data.template_file.as3_s3 depends on []
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/12/19 11:18:12 [TRACE] attachDataDependenciesTransformer: data.template_file.s3_values depends on []
+2020/12/19 11:18:12 [TRACE] attachDataDependenciesTransformer: data.template_file.s3 depends on []
+2020/12/19 11:18:12 [TRACE] attachDataDependenciesTransformer: data.template_file.as3_s3 depends on []
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/12/19 11:18:12 [TRACE] ForcedCBDTransformer: "null_resource.export_rendered_template (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/12/19 11:18:12 [TRACE] ForcedCBDTransformer: "data.template_file.as3_s3 (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/12/19 11:18:12 [TRACE] ForcedCBDTransformer: "data.template_file.s3_values (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/12/19 11:18:12 [TRACE] ForcedCBDTransformer: "data.template_file.s3 (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/12/19 11:18:12 [TRACE] ForcedCBDTransformer: "aws_s3_bucket.mybucket (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/12/19 11:18:12 [TRACE] ForcedCBDTransformer: "null_resource.export_rendered_s3_template (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/12/19 11:18:12 [TRACE] ForcedCBDTransformer: "null_resource.export_rendered_as3_s3_template (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] (close) - *terraform.graphNodeCloseProvider
+    null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] (close) - *terraform.graphNodeCloseProvider
+    data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] (close) - *terraform.graphNodeCloseProvider
+    null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] (close) - *terraform.graphNodeCloseProvider
+    data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provisioner.local-exec - *terraform.NodeProvisioner
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/hashicorp/null"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/hashicorp/template"] (close) - *terraform.graphNodeCloseProvider
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+  data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+    var.prefix - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+  null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+    provisioner.local-exec - *terraform.NodeProvisioner
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_s3_bucket.mybucket (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/null"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/null"] (close) - *terraform.graphNodeCloseProvider
+    null_resource.export_rendered_as3_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_s3_template (expand) - *terraform.nodeExpandPlannableResource
+    null_resource.export_rendered_template (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/template"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/template"] (close) - *terraform.graphNodeCloseProvider
+    data.template_file.as3_s3 (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3 (expand) - *terraform.nodeExpandPlannableResource
+    data.template_file.s3_values (expand) - *terraform.nodeExpandPlannableResource
+  provisioner.local-exec - *terraform.NodeProvisioner
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/hashicorp/null"] (close) - *terraform.graphNodeCloseProvider
+    provider["registry.terraform.io/hashicorp/template"] (close) - *terraform.graphNodeCloseProvider
+  var.prefix - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2020/12/19 11:18:12 [DEBUG] Starting graph walk: walkPlan
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/template\"]"
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "provisioner.local-exec"
+2020/12/19 11:18:12 [TRACE] vertex "provisioner.local-exec": starting visit (*terraform.NodeProvisioner)
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/template\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "var.region"
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/null\"]"
+2020/12/19 11:18:12 [TRACE] vertex "var.region": starting visit (*terraform.NodeRootVariable)
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/null\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/12/19 11:18:12 [TRACE] vertex "var.region": visit complete
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "var.prefix"
+2020/12/19 11:18:12 [TRACE] vertex "var.prefix": starting visit (*terraform.NodeRootVariable)
+2020/12/19 11:18:12 [TRACE] vertex "var.prefix": visit complete
+2020-12-19T11:18:12.787-0800 [DEBUG] plugin: starting plugin: path=/usr/local/bin/terraform args=[/usr/local/bin/terraform, internal-plugin, provisioner, local-exec]
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2020-12-19T11:18:12.789-0800 [INFO]  plugin: configuring client automatic mTLS
+2020-12-19T11:18:12.792-0800 [DEBUG] plugin: plugin started: path=/usr/local/bin/terraform pid=35708
+2020-12-19T11:18:12.792-0800 [DEBUG] plugin: waiting for RPC address: path=/usr/local/bin/terraform
+2020-12-19T11:18:12.815-0800 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4 args=[.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4]
+2020-12-19T11:18:12.820-0800 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4 pid=35710
+2020-12-19T11:18:12.820-0800 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4
+2020-12-19T11:18:12.826-0800 [INFO]  plugin.terraform-provider-template_v2.2.0_x4: configuring server automatic mTLS: timestamp=2020-12-19T11:18:12.826-0800
+2020-12-19T11:18:12.841-0800 [DEBUG] plugin: using plugin: version=5
+2020/12/19 11:18:12 [TRACE] vertex "provisioner.local-exec": visit complete
+2020-12-19T11:18:12.841-0800 [TRACE] plugin.stdio: waiting for stdio data
+2020-12-19T11:18:12.850-0800 [DEBUG] plugin.terraform-provider-template_v2.2.0_x4: plugin address: address=/var/folders/yh/4084gs6x7t78bhqz9qw8cbdjt0h10j/T/plugin117108493 network=unix timestamp=2020-12-19T11:18:12.849-0800
+2020-12-19T11:18:12.850-0800 [DEBUG] plugin: using plugin: version=5
+2020/12/19 11:18:12 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/template\"]" provider for provider["registry.terraform.io/hashicorp/template"]
+2020-12-19T11:18:12.895-0800 [TRACE] plugin.stdio: waiting for stdio data
+2020/12/19 11:18:12 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/template"]: no configuration at all
+2020/12/19 11:18:12 [TRACE] GRPCProvider: GetSchema
+2020-12-19T11:18:12.895-0800 [INFO]  plugin: configuring client automatic mTLS
+2020-12-19T11:18:12.895-0800 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2020/12/19 11:18:12 [TRACE] No provider meta schema returned
+2020-12-19T11:18:12.916-0800 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5]
+2020-12-19T11:18:12.920-0800 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5 pid=35711
+2020-12-19T11:18:12.920-0800 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5
+2020-12-19T11:18:12.926-0800 [INFO]  plugin.terraform-provider-null_v3.0.0_x5: configuring server automatic mTLS: timestamp=2020-12-19T11:18:12.926-0800
+2020-12-19T11:18:12.949-0800 [DEBUG] plugin: using plugin: version=5
+2020-12-19T11:18:12.949-0800 [DEBUG] plugin.terraform-provider-null_v3.0.0_x5: plugin address: address=/var/folders/yh/4084gs6x7t78bhqz9qw8cbdjt0h10j/T/plugin151572658 network=unix timestamp=2020-12-19T11:18:12.949-0800
+2020/12/19 11:18:12 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/null\"]" provider for provider["registry.terraform.io/hashicorp/null"]
+2020-12-19T11:18:12.997-0800 [TRACE] plugin.stdio: waiting for stdio data
+2020/12/19 11:18:12 [TRACE] GRPCProvider: Configure
+2020-12-19T11:18:12.997-0800 [INFO]  plugin: configuring client automatic mTLS
+2020/12/19 11:18:12 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/template\"]": visit complete
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "data.template_file.as3_s3 (expand)"
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.as3_s3 (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.as3_s3 (expand)": expanding dynamic subgraph
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "data.template_file.s3 (expand)"
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3 (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3 (expand)": expanding dynamic subgraph
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "data.template_file.s3_values (expand)"
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3_values (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3_values (expand)": expanding dynamic subgraph
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3 (expand)": entering dynamic subgraph
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3_values (expand)": entering dynamic subgraph
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.as3_s3 (expand)": entering dynamic subgraph
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "data.template_file.as3_s3"
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.as3_s3": starting visit (*terraform.NodePlannableResource)
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "data.template_file.s3"
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "data.template_file.s3_values"
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3": starting visit (*terraform.NodePlannableResource)
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3_values": starting visit (*terraform.NodePlannableResource)
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.as3_s3": expanding dynamic subgraph
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3": expanding dynamic subgraph
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3_values": expanding dynamic subgraph
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/12/19 11:18:12 [TRACE] ResourceCountTransformer: adding data.template_file.s3 as *terraform.NodePlannableResourceInstance
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  data.template_file.s3 - *terraform.NodePlannableResourceInstance
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/12/19 11:18:12 [DEBUG] Resource instance state not found for node "data.template_file.s3", instance data.template_file.s3
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/12/19 11:18:12 [INFO] ReferenceTransformer: reference not found: "var.prefix"
+2020/12/19 11:18:12 [INFO] ReferenceTransformer: reference not found: "var.region"
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "data.template_file.s3" references: []
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3": entering dynamic subgraph
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/12/19 11:18:12 [TRACE] ResourceCountTransformer: adding data.template_file.as3_s3 as *terraform.NodePlannableResourceInstance
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "data.template_file.s3"
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3": starting visit (*terraform.NodePlannableResourceInstance)
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  data.template_file.as3_s3 - *terraform.NodePlannableResourceInstance
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/12/19 11:18:12 [DEBUG] Resource instance state not found for node "data.template_file.as3_s3", instance data.template_file.as3_s3
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/12/19 11:18:12 [INFO] ReferenceTransformer: reference not found: "var.prefix"
+2020/12/19 11:18:12 [INFO] ReferenceTransformer: reference not found: "var.region"
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "data.template_file.as3_s3" references: []
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.as3_s3": entering dynamic subgraph
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "data.template_file.as3_s3"
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.as3_s3": starting visit (*terraform.NodePlannableResourceInstance)
+2020/12/19 11:18:12 [TRACE] ResourceCountTransformer: adding data.template_file.s3_values as *terraform.NodePlannableResourceInstance
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  data.template_file.s3_values - *terraform.NodePlannableResourceInstance
+  ------
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/12/19 11:18:12 [DEBUG] Resource instance state not found for node "data.template_file.s3_values", instance data.template_file.s3_values
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/12/19 11:18:12 [INFO] ReferenceTransformer: reference not found: "var.prefix"
+2020/12/19 11:18:12 [INFO] ReferenceTransformer: reference not found: "var.region"
+2020/12/19 11:18:12 [DEBUG] ReferenceTransformer: "data.template_file.s3_values" references: []
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/12/19 11:18:12 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3_values": entering dynamic subgraph
+2020/12/19 11:18:12 [TRACE] dag/walk: visiting "data.template_file.s3_values"
+2020/12/19 11:18:12 [TRACE] vertex "data.template_file.s3_values": starting visit (*terraform.NodePlannableResourceInstance)
+2020-12-19T11:18:13.018-0800 [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5]
+2020-12-19T11:18:13.031-0800 [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5 pid=35712
+2020-12-19T11:18:13.031-0800 [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5
+2020-12-19T11:18:13.059-0800 [INFO]  plugin.terraform-provider-aws_v3.21.0_x5: configuring server automatic mTLS: timestamp=2020-12-19T11:18:13.059-0800
+2020-12-19T11:18:13.083-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: plugin address: address=/var/folders/yh/4084gs6x7t78bhqz9qw8cbdjt0h10j/T/plugin803858591 network=unix timestamp=2020-12-19T11:18:13.083-0800
+2020-12-19T11:18:13.083-0800 [DEBUG] plugin: using plugin: version=5
+2020/12/19 11:18:13 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2020-12-19T11:18:13.127-0800 [TRACE] plugin.stdio: waiting for stdio data
+2020/12/19 11:18:13 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2020/12/19 11:18:13 [TRACE] GRPCProvider: GetSchema
+2020/12/19 11:18:13 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/null"]: no configuration at all
+2020/12/19 11:18:13 [TRACE] GRPCProvider: GetSchema
+2020/12/19 11:18:13 [TRACE] ReadResourceInstanceState: reading state for data.template_file.s3
+2020/12/19 11:18:13 [TRACE] ReadResourceInstanceState: no state present for data.template_file.s3
+2020/12/19 11:18:13 [TRACE] ReadResourceInstanceState: reading state for data.template_file.as3_s3
+2020/12/19 11:18:13 [TRACE] ReadResourceInstanceState: no state present for data.template_file.as3_s3
+2020/12/19 11:18:13 [TRACE] ReadResourceInstanceState: reading state for data.template_file.s3_values
+2020/12/19 11:18:13 [TRACE] ReadResourceInstanceState: no state present for data.template_file.s3_values
+2020/12/19 11:18:13 [TRACE] EvalReadData: Re-validating config for data.template_file.as3_s3
+2020/12/19 11:18:13 [TRACE] EvalReadData: Re-validating config for data.template_file.s3_values
+2020/12/19 11:18:13 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2020/12/19 11:18:13 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2020/12/19 11:18:13 [TRACE] EvalReadData: Re-validating config for data.template_file.s3
+2020/12/19 11:18:13 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2020/12/19 11:18:13 [TRACE] EvalReadData: data.template_file.as3_s3 configuration is complete, so reading from provider
+2020/12/19 11:18:13 [TRACE] GRPCProvider: Configure
+2020/12/19 11:18:13 [TRACE] GRPCProvider: ReadDataSource
+2020/12/19 11:18:13 [TRACE] EvalReadData: data.template_file.s3_values configuration is complete, so reading from provider
+2020/12/19 11:18:13 [TRACE] GRPCProvider: ReadDataSource
+2020/12/19 11:18:13 [TRACE] EvalReadData: data.template_file.s3 configuration is complete, so reading from provider
+2020/12/19 11:18:13 [TRACE] GRPCProvider: ReadDataSource
+2020/12/19 11:18:13 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/null\"]": visit complete
+2020/12/19 11:18:13 [TRACE] EvalWriteState: using RefreshState for data.template_file.as3_s3
+2020/12/19 11:18:13 [TRACE] EvalWriteState: writing current state object for data.template_file.as3_s3
+2020/12/19 11:18:13 [TRACE] EvalWriteState: using RefreshState for data.template_file.s3
+2020/12/19 11:18:13 [TRACE] EvalWriteState: using RefreshState for data.template_file.s3_values
+2020/12/19 11:18:13 [TRACE] EvalWriteState: writing current state object for data.template_file.s3
+2020/12/19 11:18:13 [TRACE] EvalWriteState: writing current state object for data.template_file.s3_values
+2020/12/19 11:18:13 [TRACE] EvalWriteState: writing current state object for data.template_file.as3_s3
+2020/12/19 11:18:13 [TRACE] EvalWriteState: writing current state object for data.template_file.s3_values
+2020/12/19 11:18:13 [TRACE] EvalWriteState: writing current state object for data.template_file.s3
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.s3_values": visit complete
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.as3_s3": visit complete
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.s3_values": dynamic subgraph completed successfully
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.as3_s3": dynamic subgraph completed successfully
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.s3_values": visit complete
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.as3_s3": visit complete
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.s3_values (expand)": dynamic subgraph completed successfully
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.as3_s3 (expand)": dynamic subgraph completed successfully
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.s3_values (expand)": visit complete
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.as3_s3 (expand)": visit complete
+2020/12/19 11:18:13 [TRACE] dag/walk: visiting "null_resource.export_rendered_template (expand)"
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_template (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2020/12/19 11:18:13 [TRACE] dag/walk: visiting "null_resource.export_rendered_as3_s3_template (expand)"
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_template (expand)": expanding dynamic subgraph
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_as3_s3_template (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_as3_s3_template (expand)": expanding dynamic subgraph
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_template (expand)": entering dynamic subgraph
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_as3_s3_template (expand)": entering dynamic subgraph
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.s3": visit complete
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.s3": dynamic subgraph completed successfully
+2020/12/19 11:18:13 [TRACE] dag/walk: visiting "null_resource.export_rendered_template"
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.s3": visit complete
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_template": starting visit (*terraform.NodePlannableResource)
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.s3 (expand)": dynamic subgraph completed successfully
+2020/12/19 11:18:13 [TRACE] vertex "data.template_file.s3 (expand)": visit complete
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_template": expanding dynamic subgraph
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/12/19 11:18:13 [TRACE] dag/walk: visiting "null_resource.export_rendered_s3_template (expand)"
+2020/12/19 11:18:13 [TRACE] ResourceCountTransformer: adding null_resource.export_rendered_template as *terraform.NodePlannableResourceInstance
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_s3_template (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_s3_template (expand)": expanding dynamic subgraph
+2020/12/19 11:18:13 [TRACE] dag/walk: visiting "null_resource.export_rendered_as3_s3_template"
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_as3_s3_template": starting visit (*terraform.NodePlannableResource)
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  null_resource.export_rendered_template - *terraform.NodePlannableResourceInstance
+  ------
+2020/12/19 11:18:13 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/template\"] (close)"
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/template\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/12/19 11:18:13 [TRACE] GRPCProvider: Close
+2020/12/19 11:18:13 [DEBUG] Resource instance state not found for node "null_resource.export_rendered_template", instance null_resource.export_rendered_template
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/12/19 11:18:13 [DEBUG] ReferenceTransformer: "null_resource.export_rendered_template" references: []
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_template": entering dynamic subgraph
+2020/12/19 11:18:13 [TRACE] dag/walk: visiting "null_resource.export_rendered_template"
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_template": starting visit (*terraform.NodePlannableResourceInstance)
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_s3_template (expand)": entering dynamic subgraph
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_as3_s3_template": expanding dynamic subgraph
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/12/19 11:18:13 [TRACE] dag/walk: visiting "null_resource.export_rendered_s3_template"
+2020/12/19 11:18:13 [TRACE] ResourceCountTransformer: adding null_resource.export_rendered_as3_s3_template as *terraform.NodePlannableResourceInstance
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_s3_template": starting visit (*terraform.NodePlannableResource)
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  null_resource.export_rendered_as3_s3_template - *terraform.NodePlannableResourceInstance
+  ------
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/12/19 11:18:13 [DEBUG] Resource instance state not found for node "null_resource.export_rendered_as3_s3_template", instance null_resource.export_rendered_as3_s3_template
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/12/19 11:18:13 [DEBUG] ReferenceTransformer: "null_resource.export_rendered_as3_s3_template" references: []
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_as3_s3_template": entering dynamic subgraph
+2020/12/19 11:18:13 [TRACE] dag/walk: visiting "null_resource.export_rendered_as3_s3_template"
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_as3_s3_template": starting visit (*terraform.NodePlannableResourceInstance)
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_s3_template": expanding dynamic subgraph
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/12/19 11:18:13 [TRACE] ResourceCountTransformer: adding null_resource.export_rendered_s3_template as *terraform.NodePlannableResourceInstance
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  null_resource.export_rendered_s3_template - *terraform.NodePlannableResourceInstance
+  ------
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/12/19 11:18:13 [DEBUG] Resource instance state not found for node "null_resource.export_rendered_s3_template", instance null_resource.export_rendered_s3_template
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/12/19 11:18:13 [DEBUG] ReferenceTransformer: "null_resource.export_rendered_s3_template" references: []
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/12/19 11:18:13 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_s3_template": entering dynamic subgraph
+2020/12/19 11:18:13 [TRACE] dag/walk: visiting "null_resource.export_rendered_s3_template"
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_s3_template": starting visit (*terraform.NodePlannableResourceInstance)
+2020-12-19T11:18:13.131-0800 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/template/2.2.0/darwin_amd64/terraform-provider-template_v2.2.0_x4 pid=35710
+2020-12-19T11:18:13.131-0800 [DEBUG] plugin: plugin exited
+2020/12/19 11:18:13 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/template\"] (close)": visit complete
+2020/12/19 11:18:13 [TRACE] ReadResourceInstanceState: reading state for null_resource.export_rendered_template
+2020/12/19 11:18:13 [TRACE] ReadResourceInstanceState: no state present for null_resource.export_rendered_template
+2020/12/19 11:18:13 [TRACE] ReadResourceInstanceState: reading state for null_resource.export_rendered_as3_s3_template
+2020/12/19 11:18:13 [TRACE] ReadResourceInstanceState: no state present for null_resource.export_rendered_as3_s3_template
+2020/12/19 11:18:13 [TRACE] ReadResourceInstanceState: reading state for null_resource.export_rendered_s3_template
+2020/12/19 11:18:13 [TRACE] ReadResourceInstanceState: no state present for null_resource.export_rendered_s3_template
+2020/12/19 11:18:13 [DEBUG] refresh: null_resource.export_rendered_template: no state, so not refreshing
+2020/12/19 11:18:13 [TRACE] EvalWriteState: using RefreshState for null_resource.export_rendered_template
+2020/12/19 11:18:13 [DEBUG] refresh: null_resource.export_rendered_s3_template: no state, so not refreshing
+2020/12/19 11:18:13 [DEBUG] refresh: null_resource.export_rendered_as3_s3_template: no state, so not refreshing
+2020/12/19 11:18:13 [TRACE] EvalWriteState: removing state object for null_resource.export_rendered_template
+2020/12/19 11:18:13 [TRACE] EvalWriteState: using RefreshState for null_resource.export_rendered_s3_template
+2020/12/19 11:18:13 [TRACE] EvalWriteState: using RefreshState for null_resource.export_rendered_as3_s3_template
+2020/12/19 11:18:13 [TRACE] EvalWriteState: removing state object for null_resource.export_rendered_s3_template
+2020/12/19 11:18:13 [TRACE] EvalWriteState: removing state object for null_resource.export_rendered_as3_s3_template
+2020/12/19 11:18:13 [TRACE] Re-validating config for "null_resource.export_rendered_s3_template"
+2020/12/19 11:18:13 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/12/19 11:18:13 [TRACE] Re-validating config for "null_resource.export_rendered_template"
+2020/12/19 11:18:13 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/12/19 11:18:13 [TRACE] Re-validating config for "null_resource.export_rendered_as3_s3_template"
+2020/12/19 11:18:13 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/12/19 11:18:13 [TRACE] GRPCProvider: PlanResourceChange
+2020/12/19 11:18:13 [TRACE] GRPCProvider: PlanResourceChange
+2020/12/19 11:18:13 [TRACE] GRPCProvider: PlanResourceChange
+2020/12/19 11:18:13 [TRACE] EvalWriteState: writing current state object for null_resource.export_rendered_as3_s3_template
+2020/12/19 11:18:13 [TRACE] EvalWriteState: writing current state object for null_resource.export_rendered_s3_template
+2020/12/19 11:18:13 [TRACE] EvalWriteState: writing current state object for null_resource.export_rendered_template
+2020/12/19 11:18:13 [TRACE] EvalWriteDiff: recorded Create change for null_resource.export_rendered_s3_template
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_s3_template": visit complete
+2020/12/19 11:18:13 [TRACE] EvalWriteDiff: recorded Create change for null_resource.export_rendered_template
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_s3_template": dynamic subgraph completed successfully
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_s3_template": visit complete
+2020/12/19 11:18:13 [TRACE] EvalWriteDiff: recorded Create change for null_resource.export_rendered_as3_s3_template
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_s3_template (expand)": dynamic subgraph completed successfully
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_template": visit complete
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_s3_template (expand)": visit complete
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_as3_s3_template": visit complete
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_as3_s3_template": dynamic subgraph completed successfully
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_as3_s3_template": visit complete
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_as3_s3_template (expand)": dynamic subgraph completed successfully
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_template": dynamic subgraph completed successfully
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_as3_s3_template (expand)": visit complete
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_template": visit complete
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_template (expand)": dynamic subgraph completed successfully
+2020/12/19 11:18:13 [TRACE] vertex "null_resource.export_rendered_template (expand)": visit complete
+2020/12/19 11:18:13 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/null\"] (close)"
+2020/12/19 11:18:13 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/null\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/12/19 11:18:13 [TRACE] GRPCProvider: Close
+2020-12-19T11:18:13.135-0800 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-12-19T11:18:13.137-0800 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/null/3.0.0/darwin_amd64/terraform-provider-null_v3.0.0_x5 pid=35711
+2020-12-19T11:18:13.137-0800 [DEBUG] plugin: plugin exited
+2020/12/19 11:18:13 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/null\"] (close)": visit complete
+2020/12/19 11:18:13 [TRACE] GRPCProvider: Configure
+2020-12-19T11:18:13.191-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: 2020/12/19 11:18:13 [INFO] AWS Auth provider used: "EnvProvider"
+2020-12-19T11:18:13.191-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: 2020/12/19 11:18:13 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2020/12/19 11:18:17 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:18:17 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:17 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:18:18 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:22 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:22 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:18:22 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:18:23 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:27 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:18:27 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:18:27 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:28 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:32 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:32 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:18:32 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:18:33 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:37 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:18:37 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:18:37 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:38 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:42 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:18:42 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:42 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:18:43 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:47 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:18:47 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:18:47 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:48 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:52 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:18:52 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:18:52 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:53 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:57 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:18:57 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:18:57 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:18:58 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:02 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:19:02 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:19:02 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:03 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:07 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:19:07 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:19:07 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:08 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:12 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:19:12 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:12 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:19:13 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:17 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:19:17 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:17 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:19:18 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:22 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:19:22 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:19:22 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:23 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:27 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:19:27 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:19:27 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:28 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:32 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:32 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:19:32 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:19:33 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:37 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:37 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:19:37 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:19:38 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:42 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:19:42 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:19:42 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:43 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:47 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:19:47 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:47 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:19:48 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:52 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:19:52 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:52 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:19:53 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:57 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:19:57 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:19:57 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:19:58 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:02 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:20:02 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:20:02 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:03 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:07 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:20:07 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:20:07 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:08 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:12 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:20:12 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:20:12 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:13 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:17 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:20:17 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:17 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:20:18 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:22 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:20:22 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:22 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:20:23 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:27 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:20:27 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:20:27 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:28 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:32 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:32 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:20:32 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:20:33 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:37 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:37 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:20:37 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:20:38 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:42 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:42 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:20:42 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:20:43 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:47 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:20:47 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:47 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:20:48 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:52 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:20:52 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:20:52 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:53 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:57 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:20:57 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:20:57 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:20:58 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:21:02 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:21:02 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:21:02 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:21:03 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:21:07 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:21:07 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:21:07 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:21:08 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:21:12 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:21:12 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:21:12 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:21:13 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:21:17 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:21:17 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:21:17 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:21:18 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:21:22 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:21:22 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:21:22 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:21:23 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:21:27 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/12/19 11:21:27 [TRACE] dag/walk: vertex "aws_s3_bucket.mybucket (expand)" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/12/19 11:21:27 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:21:28 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_s3_bucket.mybucket (expand)"
+2020/12/19 11:21:28 [TRACE] backend/local: waiting for the running operation to stop
+2020/12/19 11:21:28 [WARN] terraform: Stop called, initiating interrupt sequence
+2020/12/19 11:21:28 [WARN] terraform: run context exists, stopping
+2020/12/19 11:21:28 [INFO] terraform: waiting for graceful stop to complete
+2020/12/19 11:21:28 [TRACE] Context: requesting providers and provisioners to gracefully stop
+2020/12/19 11:21:28 [TRACE] GRPCProvider: Stop
+2020-12-19T11:21:28.792-0800 [TRACE] plugin.terraform-provider-aws_v3.21.0_x5: plugin received interrupt signal, ignoring: count=1 timestamp=2020-12-19T11:21:28.791-0800
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: panic: close of nil channel
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: 
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: goroutine 183 [running]:
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).stop(0xc000de3820)
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:201 +0x71
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).Stop(0xc000de3820, 0x7b52160, 0xc001ab2270, 0xc001ab22a0, 0xc000de3820, 0xc001ab2270, 0xc00103dba0)
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:215 +0xa1
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/internal/tfplugin5._Provider_Stop_Handler(0x6d6a680, 0xc000de3820, 0x7b52160, 0xc001ab2270, 0xc001c76180, 0x0, 0x7b52160, 0xc001ab2270, 0x0, 0x0)
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/internal/tfplugin5/tfplugin5_grpc.pb.go:434 +0x217
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: google.golang.org/grpc.(*Server).processUnaryRPC(0xc000221880, 0x7b772c0, 0xc00102ef00, 0xc00149a000, 0xc0005a6c00, 0xb3bf0e8, 0x0, 0x0, 0x0)
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1194 +0x50a
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: google.golang.org/grpc.(*Server).handleStream(0xc000221880, 0x7b772c0, 0xc00102ef00, 0xc00149a000, 0x0)
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1517 +0xcfd
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: google.golang.org/grpc.(*Server).serveStreams.func1.2(0xc000358d90, 0xc000221880, 0x7b772c0, 0xc00102ef00, 0xc00149a000)
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:859 +0xa1
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2020-12-19T11:21:28.795-0800 [DEBUG] plugin.terraform-provider-aws_v3.21.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:857 +0x204
+2020-12-19T11:21:28.799-0800 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-12-19T11:21:28.799-0800 [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.21.0/darwin_amd64/terraform-provider-aws_v3.21.0_x5 pid=35712 error="exit status 2"
+2020/12/19 11:21:28 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2020/12/19 11:21:28 [TRACE] dag/walk: upstream of "aws_s3_bucket.mybucket (expand)" errored, so skipping
+2020/12/19 11:21:28 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2020/12/19 11:21:28 [TRACE] dag/walk: upstream of "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" errored, so skipping
+2020/12/19 11:21:28 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2020/12/19 11:21:28 [TRACE] backend/local: graceful stop has completed
+2020/12/19 11:21:28 [INFO] backend/local: plan operation completed
+2020/12/19 11:21:28 [WARN] terraform: stop complete
+2020/12/19 11:21:28 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2020/12/19 11:21:28 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2020-12-19T11:21:28.803-0800 [DEBUG] plugin: plugin exited
+2020-12-19T11:21:28.803-0800 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-12-19T11:21:28.803-0800 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-12-19T11:21:28.808-0800 [DEBUG] plugin: plugin process exited: path=/usr/local/bin/terraform pid=35703
+2020-12-19T11:21:28.808-0800 [DEBUG] plugin: plugin exited
+2020-12-19T11:21:28.808-0800 [DEBUG] plugin: plugin process exited: path=/usr/local/bin/terraform pid=35708
+2020-12-19T11:21:28.808-0800 [DEBUG] plugin: plugin exited
