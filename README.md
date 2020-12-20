@@ -1,8 +1,8 @@
-# F5 BIG-IP Terraform & Consul Webinar - Zero Touch App Delivery with F5, Terraform & Consul
-This repository demonstrates using Terraform to perform day zero infrastructure provisioning of BIG-IP VE (Pay as you Go), Consul & NGINX servers in AWS. Additionally, Github Actions CI/CD worflows are used to illustrate post zero day ongoing deployments of F5 BIG-IP AS3 and Consul service discovery declarations.
+# F5 BIG-IP Github Action Demo
+This repo can be used to show BIG-IP and Github Action Integration. It uses terraform to deploy the configuration. Uses As3 Service discovery with Consul for backend application. Shows demonstration on how WAF policy can be deployed in automated fashion.
 
 # Demo
-You can check out a recording of this demo [here](https://youtu.be/rVTgTXpiopc?t=1489)
+
 
 # Architecture
 ![Demo Arch](assets/f5_arch.png)
