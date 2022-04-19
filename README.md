@@ -2,7 +2,7 @@
 This repo can be used to show BIG-IP and Github Action Integration. It uses terraform to deploy the configuration. Uses As3 Service discovery with Consul for backend application. Shows demonstration on how WAF policy can be deployed in automated fashion.
 
 # Demo
-![Watch the video](https://www.youtube.com/watch?v=4-0kKjH529w&t=34s)
+![Watch the video](https://youtu.be/4-0kKjH529w)](https://www.youtube.com/watch?v=4-0kKjH529w&t=34s)
 
 # Architecture
 ![Demo Arch](assets/f5_arch.png)
